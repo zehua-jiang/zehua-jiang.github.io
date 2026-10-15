@@ -23,16 +23,29 @@
     }));
   }
 
-  chipGroup(document.querySelector('.pub-filter'), 'filter', f => {
-    document.querySelectorAll('#pubList li').forEach(li => { li.hidden = f !== 'all' && li.dataset.cat !== f; });
-  });
-
   const setLang = lang => {
     document.querySelectorAll('[data-lang-panel]').forEach(p => { p.hidden = p.dataset.langPanel !== lang; });
     store.set('lang', lang);
   };
   chipGroup(document.querySelector('.lang-switch'), 'lang', setLang);
   if (store.get('lang') === 'zh') document.querySelector('.lang-switch [data-lang="zh"]').click();
+
+  /* ---------- copy email + citations ---------- */
+  const copyStatus = document.getElementById('copyStatus');
+  let copyTimer;
+  document.querySelectorAll('[data-copy-text], [data-copy-target]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.copyText || document.getElementById(button.dataset.copyTarget).textContent;
+      clearTimeout(copyTimer);
+      try {
+        await navigator.clipboard.writeText(text);
+        copyStatus.textContent = button.dataset.copyText ? 'Email address copied.' : 'BibTeX copied.';
+      } catch (e) {
+        copyStatus.textContent = 'Could not copy. Please select and copy the text.';
+      }
+      copyTimer = setTimeout(() => { copyStatus.textContent = ''; }, 3000);
+    });
+  });
 
   /* ---------- lightbox ---------- */
   const box = document.getElementById('lightbox');
@@ -46,7 +59,7 @@
 
   /* ---------- reveal + active nav ---------- */
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealEls = document.querySelectorAll('.source, .arc-item, .pubs li, .finding');
+  const revealEls = document.querySelectorAll('.source, .arc-item, .finding');
   if ('IntersectionObserver' in window && !reduced) {
     revealEls.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver(entries => entries.forEach(e => {

@@ -2,9 +2,9 @@
 
 Static personal site: no build step. Open `index.html` locally, or run `python3 -m http.server` and visit http://localhost:8000.
 
-- `index.html`: all content (research, work, publications, news, about)
+- `index.html`: all content (about, research, work, news, background)
 - `assets/css/style.css`: styles, with light and dark themes
-- `assets/js/main.js`: theme toggle, publication filter, EN/中文 bio, and lightbox
+- `assets/js/main.js`: theme toggle, EN/中文 bio, clipboard buttons, and lightbox
 - `assets/js/tile-name.js`: live hero animation with agents assembling “Zehua Jiang” on a transparent canvas, with red outlines marking active tile edits
 - `assets/js/name-platformers.js`: original procedural pixel robots that run and jump along the name tiles, using gravity and tile collision
 - `assets/img/`: figures from the thesis proposal and papers
