@@ -78,19 +78,8 @@ p { margin: 0 0 1em; }
 .btn:hover { border-color: var(--accent); transform: translateY(-1px); }
 .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-.hero-demo { margin: 0; background: #241820; border-radius: 14px; padding: 12px; box-shadow: 0 20px 50px -20px rgba(40, 10, 30, .55); color: #e8dce2; max-width: 440px; justify-self: end; width: 100%; }
-.demo-head { display: flex; align-items: center; gap: 6px; padding: 2px 4px 10px; color: #b9a5af; }
-.demo-head .dot { width: 9px; height: 9px; border-radius: 50%; background: #4a3542; }
-.demo-title { margin-left: 8px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-#levelCanvas { width: 100%; height: auto; aspect-ratio: 1; border-radius: 6px; image-rendering: pixelated; display: block; }
-.demo-stats { display: flex; gap: 18px; padding: 10px 4px 6px; color: #b9a5af; }
-.demo-stats b { color: #fff; font-weight: 500; }
-.demo-log { list-style: none; margin: 0; padding: 8px 10px; height: 76px; overflow: hidden; background: #1a1117; border-radius: 6px; font-size: .72rem; line-height: 1.55; }
-.demo-log li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #9d8a94; }
-.demo-log li.keep { color: #7fe0a8; }
-.demo-log li.drop { color: #e88a8a; }
-.demo-log li.sys { color: #d8b56d; }
-.hero-demo figcaption { font-size: .78rem; color: #a8949f; padding: 10px 4px 2px; line-height: 1.5; }
+.name-animation { margin: 0; max-width: 440px; justify-self: end; width: 100%; }
+#nameCanvas, .name-animation img { width: 100%; height: auto; image-rendering: pixelated; display: block; }
 
 /* ---------- sections ---------- */
 .section { padding: 96px 0; }
@@ -227,7 +216,7 @@ p { margin: 0 0 1em; }
 /* ---------- responsive ---------- */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 48px; padding-bottom: 64px; }
-  .hero-demo { justify-self: start; }
+  .name-animation { justify-self: start; }
   .sources, .next-grid { grid-template-columns: 1fr; }
   .facts { grid-template-columns: 1fr; }
   .about { grid-template-columns: 1fr; gap: 32px; }

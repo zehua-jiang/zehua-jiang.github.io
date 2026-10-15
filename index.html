@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zehua Jiang</title>
-<meta name="description" content="Zehua Jiang — PhD candidate at NYU Tandon studying how agents learn and adapt construction knowledge for procedural content generation: reinforcement learning level generators, Agentic PCG with tool-using language models, and reliable local generation.">
+<meta name="description" content="Zehua Jiang — PhD candidate at New York University researching how agents learn and reuse construction strategies to build playable game levels from design goals.">
 <meta property="og:title" content="Zehua Jiang — Learning and Adapting Agents for PCG">
-<meta property="og:description" content="PhD research at the NYU Game Innovation Lab on RL level generators, Agentic PCG, and harness-controlled local models.">
+<meta property="og:description" content="Research at the NYU Game Innovation Lab on procedural content generation through reinforcement learning, language models, and reusable construction tools.">
 <meta property="og:image" content="assets/img/apcg-binary-1.png">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,12 +40,12 @@
   <!-- ============ HERO ============ -->
   <section class="hero wrap">
     <div class="hero-text">
-      <p class="eyebrow">PhD candidate · NYU Tandon · Game Innovation Lab</p>
+      <p class="eyebrow">PhD candidate · New York University · Game Innovation Lab</p>
       <h1>Zehua Jiang</h1>
       <p class="lede">
-        I build agents that <em>design game levels</em>. My research asks where an agent's construction
-        knowledge comes from — learned through reinforcement, carried over from language-model pretraining,
-        or encoded in reusable tools — and how the generation process lets it put that knowledge to work.
+        I study how agents <em>build playable game levels</em> from design goals. My work asks how they
+        learn from interaction with a game, reuse knowledge from pretraining, and choose tools that
+        help turn a request into a working level.
       </p>
       <p class="thesis">
         <span class="mono label">Thesis</span>
@@ -60,22 +60,12 @@
       </div>
     </div>
 
-    <figure class="hero-demo" aria-label="Animated demo: an agent edits a level and keeps only edits that lengthen the path">
-      <div class="demo-head mono">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="demo-title">agent · binary-door · maximize path</span>
-      </div>
-      <canvas id="levelCanvas" width="390" height="390"></canvas>
-      <div class="demo-stats mono">
-        <span>step <b id="statStep">0</b></span>
-        <span>path <b id="statPath">0</b></span>
-        <span>kept <b id="statKept">0</b></span>
-      </div>
-      <ol class="demo-log mono" id="demoLog" aria-hidden="true"></ol>
-      <figcaption>
-        A toy version of the loop behind my work: the agent proposes an edit, the game checks it,
-        and only edits that improve the target are kept.
-      </figcaption>
+    <figure class="name-animation">
+      <canvas id="nameCanvas" width="560" height="416" role="img" aria-label="Agents build Zehua Jiang from pixel brick tiles while original platformer characters run and jump along the name">Zehua Jiang</canvas>
+      <noscript>
+        <style>#nameCanvas { display: none; }</style>
+        <img src="assets/img/zehua-jiang-tiles.png" width="560" height="416" alt="Zehua Jiang, built from pixel brick tiles">
+      </noscript>
     </figure>
   </section>
 
@@ -83,12 +73,13 @@
   <section id="research" class="section">
     <div class="wrap">
       <p class="eyebrow">Research question</p>
-      <h2>Where does an agent's construction knowledge come from?</h2>
+      <h2>How do agents learn and reuse strategies for building game levels?</h2>
       <p class="section-lede">
-        Building a level from a design goal means knowing which edits produce a traversable path, a
-        solvable puzzle, or a requested gameplay experience. Authored example levels are often scarce,
-        but game rules and an executable environment usually exist. My dissertation studies three
-        sources of knowledge in that setting.
+        A generator needs to know which edits produce a traversable path, a solvable puzzle, or a
+        requested gameplay experience. My dissertation studies this construction knowledge when
+        game rules and an executable environment are available but authored examples are limited.
+        I examine where the knowledge comes from and how observations, tools, and feedback let an
+        agent use it.
       </p>
 
       <div class="sources">
@@ -97,7 +88,7 @@
             <svg viewBox="0 0 40 40"><rect x="4" y="22" width="8" height="14" rx="1"/><rect x="16" y="14" width="8" height="22" rx="1"/><rect x="28" y="5" width="8" height="31" rx="1"/></svg>
           </div>
           <h3>Learned from feedback</h3>
-          <p>Reinforcement-learning editing policies learn construction strategies from task rewards alone, with no level corpus, and reuse them on new targets, map sizes and shapes.</p>
+          <p>Editing policies learn by building levels and receiving task rewards, without a corpus of authored examples. Their observations shape which strategies transfer to new targets, map sizes, and shapes.</p>
           <p class="mono tag">PCGRL · 2D &amp; 3D · multi-agent</p>
         </article>
         <article class="source">
@@ -105,7 +96,7 @@
             <svg viewBox="0 0 40 40"><path d="M6 10h28v18H18l-8 7v-7H6z"/></svg>
           </div>
           <h3>Carried from pretraining</h3>
-          <p>Language models select editing tools and PCG algorithms while observing their effects. They follow numeric targets and open-ended instructions without task-specific training.</p>
+          <p>Pretrained language models select editing tools and generation algorithms, observe the results, and revise the level. This supports numeric targets and broader language requests without task-specific fine-tuning.</p>
           <p class="mono tag">Agentic PCG · tool use</p>
         </article>
         <article class="source">
@@ -113,13 +104,13 @@
             <svg viewBox="0 0 40 40"><rect x="5" y="5" width="13" height="13" rx="1"/><rect x="22" y="5" width="13" height="13" rx="1"/><rect x="5" y="22" width="13" height="13" rx="1"/><rect x="22" y="22" width="13" height="13" rx="1" class="hollow"/></svg>
           </div>
           <h3>Encoded in tools</h3>
-          <p>Generators, constructors and reusable level pieces hold knowledge the model no longer needs to have, and a harness decides which edits survive.</p>
-          <p class="mono tag">harness · quality-diversity</p>
+          <p>Generation algorithms and tested level pieces supply useful constructions directly. My ongoing work asks whether search can discover reusable pieces and reduce the manual work needed to support a model.</p>
+          <p class="mono tag">PCG tools · quality-diversity</p>
         </article>
       </div>
 
       <blockquote class="finding">
-        <p>A recurring finding is that none of these sources is enough on its own. A learned policy needs the right observations, a pretrained model needs tools and feedback it can act on, and tools need a model that can pick among them.</p>
+        <p>What an agent can build depends on both its construction knowledge and the process that lets it use that knowledge. Across my studies, observations, available tools, and environmental feedback shape control, generalization, and generation cost.</p>
       </blockquote>
     </div>
   </section>
@@ -129,7 +120,7 @@
     <div class="wrap">
       <p class="eyebrow">Research arc</p>
       <h2>From learned policies to tool-using agents</h2>
-      <p class="section-lede">Five projects trace a path from learning editing policies through environmental feedback, to using pretrained knowledge through tools, to making that process reliable on local hardware. Two studies are in progress.</p>
+      <p class="section-lede">Five collaborative projects connect learned editing policies, tool-using language models, and reliable local execution. The ongoing work asks whether smaller adapted models and automatically discovered level pieces can make generation more practical while preserving control.</p>
 
       <ol class="arc">
 
@@ -142,7 +133,7 @@
           <div class="arc-body">
             <h3><a href="https://doi.org/10.1145/3555858.3563273">Learning Controllable 3D Level Generators</a></h3>
             <p class="authors"><b>Zehua Jiang</b>, Sam Earle, Michael Cerny Green, Julian Togelius</p>
-            <p>Extends PCGRL to Minecraft, where movement involves jumping and gravity. Editing policies learn recurring spatial constructions such as staircases and adapt them to many door configurations, with no authored levels.</p>
+            <p>Extends PCGRL to Minecraft tasks with jumping and gravity. Editing policies learn structures such as staircases from task feedback and adapt them to different fixed-door configurations, without authored level examples. Control is stronger for shorter path targets and remains limited for jump counts and large vertical separations.</p>
             <div class="strip strip-5">
               <img src="assets/img/mc-1.jpg" alt="Minecraft level, edit step 1" loading="lazy">
               <img src="assets/img/mc-2.jpg" alt="Minecraft level, edit step 2" loading="lazy">
@@ -163,7 +154,7 @@
           <div class="arc-body">
             <h3><a href="https://doi.org/10.1109/CoG60054.2024.10645598">Scaling, Control and Generalization in Reinforcement Learning Level Generators</a></h3>
             <p class="authors">Sam Earle, <b>Zehua Jiang</b>, Julian Togelius</p>
-            <p>A JAX implementation moves simulation and training onto the GPU. Varying observation size, randomizing map shapes and pinning key tiles shows that local observations generalize better to unseen maps: what an agent can see shapes which strategies it learns and reuses.</p>
+            <p>A JAX implementation moves simulation and training onto the GPU. We study observation size, randomized map shapes, and fixed positions for key tiles. Local observations improve generalization on the tested unseen maps, while global observations can perform better on maps matching the training setup.</p>
             <div class="strip strip-4 pixel">
               <figure><img src="assets/img/dungeon-size-1.png" alt="Dungeon level 8 by 8" loading="lazy"><figcaption class="mono">8×8</figcaption></figure>
               <figure><img src="assets/img/dungeon-size-2.png" alt="Dungeon level 16 by 16" loading="lazy"><figcaption class="mono">16×16</figcaption></figure>
@@ -183,7 +174,7 @@
           <div class="arc-body">
             <h3><a href="https://doi.org/10.1609/aiide.v21i1.36807">Video Game Level Design as a Multi-Agent Reinforcement Learning Problem</a></h3>
             <p class="authors">Sam Earle, <b>Zehua Jiang</b>, Eugene Vinitsky, Julian Togelius</p>
-            <p>Several agents with a shared policy and reward edit the same level, sharing an expensive global reward computation. When total actions are held constant some gains shrink, but benefits persist on out-of-distribution map shapes.</p>
+            <p>Several agents with a shared policy and reward edit the same level. Their joint steps let multiple edits share an expensive reward computation. Some advantages shrink when total actions and reward computations are held constant, while benefits persist on tested maps with unfamiliar randomized shapes.</p>
             <div class="strip strip-4">
               <img src="assets/img/marl-1.png" alt="Multi-agent generation, start" loading="lazy">
               <img src="assets/img/marl-2.png" alt="Multi-agent generation, early" loading="lazy">
@@ -204,7 +195,7 @@
           <div class="arc-body">
             <h3><a href="https://ssrn.com/abstract=6499021">Agentic PCG: Procedural Content Generation via Tool-using LLMs</a></h3>
             <p class="authors"><b>Zehua Jiang</b>, Sam Earle, Ahmed Khalifa, Julian Togelius</p>
-            <p>The framework at the center of my thesis. A language model observes a symbolic level and its measurements, proposes tool calls, and gets feedback after each one. Primitive edits and higher-level PCG algorithms share one interface, and an external objective decides whether each revision is kept. Computable targets and free-form language instructions can therefore drive the same process.</p>
+            <p>A language model builds and revises levels through tools, using symbolic observations and feedback after each action. Individual tile edits and higher-level generation algorithms share one interface, with evaluators deciding which revisions to keep. The framework supports computable targets and broader language requests across five game domains without task-specific fine-tuning.</p>
             <ul class="facts">
               <li><b>5</b><span>game domains, no task-specific fine-tuning</span></li>
               <li><b>4</b><span>levels of language requests: shapes, letters, spatial relations, scenes</span></li>
@@ -238,7 +229,7 @@
           <div class="arc-body">
             <h3><a href="https://ssrn.com/abstract=7502203">Enabling Agentic PCG with Harness-Controlled Local Models</a></h3>
             <p class="authors"><b>Zehua Jiang</b>, Sam Earle, Ahmed Khalifa, Julian Togelius</p>
-            <p>Local models often return incomplete tool calls or undo useful progress. An execution harness limits retries, decides which edits to keep and when to stop, and extracts numeric targets from language. None of this changes model weights. Tested Super Mario Bros. builders let the model interpret gameplay requests such as "collect five coins with a single jump".</p>
+            <p>An execution harness helps local models recover from incomplete tool calls and preserve useful edits without changing their weights. Tested platformer builders also support requests about jumps, coins, and enemy defeats. The system remains limited by what its tools and evaluators can represent, and local generation is still too slow for use during gameplay.</p>
             <div class="bigstat">
               <div><span class="num">6 <i>→</i> 64</span><span class="lbl">perfect matches out of 64 paired Zelda tasks for Qwen3.8-27B, from the bare model to the full harness</span></div>
             </div>
@@ -263,15 +254,15 @@
             <div class="next-grid">
               <article>
                 <h4>Adapting small models</h4>
-                <p>Fine-tuning sub-4B models inside the same tool framework. Supervised fine-tuning overfit, so I am training on the model's own interaction: RL with verifiable rewards from the framework's evaluators, and on-policy distillation from a larger model.</p>
+                <p>Investigating models with fewer than four billion parameters. Initial supervised fine-tuning showed signs of overfitting; the plan now examines RL with verifiable rewards and on-policy distillation, while holding the tools and execution harness fixed.</p>
               </article>
               <article>
                 <h4>Reusable level pieces</h4>
-                <p>Using quality-diversity search (MAP-Elites) to build a library of simulation-tested level pieces grouped by gameplay behavior (jumping, defeating enemies, collecting items) for an agent to place and refine.</p>
+                <p>Investigating whether quality-diversity search, starting with MAP-Elites, can discover pieces that support jumps, enemy defeats, and item collection. A simulated player would test their behavior and how they fit together before an agent reuses them.</p>
               </article>
               <article>
                 <h4>Player agents for richer feedback</h4>
-                <p>Exploring fast, schema-constrained small models that choose gameplay actions directly, so the evaluating player can show the behaviors a designer asks for.</p>
+                <p>An exploratory direction: adapting a small model to choose valid gameplay actions quickly. More capable evaluation players could demonstrate a wider range of requested behaviors and give the level-building agent more useful feedback.</p>
               </article>
             </div>
           </div>
@@ -402,16 +393,16 @@
 
         <div class="bio" data-lang-panel="en">
           <h2>Hi, I'm Zehua.</h2>
-          <p>I am a PhD candidate in Computer Science and Engineering at New York University Tandon School of Engineering, advised by Prof. <a href="http://julian.togelius.com/">Julian Togelius</a> at the <a href="https://game.engineering.nyu.edu/">NYU Game Innovation Lab</a>. Before that I earned an M.S. in Electrical Engineering at NYU and a B.S. in Optoelectronic Information Science and Engineering at <a href="https://www.sysu.edu.cn/sysuen/">Sun Yat-sen University</a>, including an exchange semester at UC Berkeley.</p>
-          <p>I got into this field after watching <i>Ready Player One</i>: a world players could keep creating for themselves, at a scale no team of designers could author by hand. Today I work on agents that turn design goals, from numeric targets to plain-language requests, into playable levels. These could serve as creative tools for game makers and as environments for training other agents. Earlier I also worked on generating synthetic biometric data (fingerprints and irises).</p>
+          <p>I am a PhD candidate in Computer Science and Engineering at New York University, advised by Prof. <a href="http://julian.togelius.com/">Julian Togelius</a> at the <a href="https://game.engineering.nyu.edu/">NYU Game Innovation Lab</a>. Before that I earned an M.S. in Electrical Engineering at New York University and a B.S. in Optoelectronic Information Science and Engineering at <a href="https://www.sysu.edu.cn/sysuen/">Sun Yat-sen University</a>, including an exchange semester at UC Berkeley.</p>
+          <p>My research focuses on procedural content generation: how agents learn or reuse strategies for building playable levels from design goals. I study reinforcement learning, language-model tool use, and reusable constructions, with an emphasis on control, generalization, reliable execution, and computational cost. The aim is to support game creation and provide varied environments for training and evaluating agents. Earlier I worked on synthetic fingerprints and irises.</p>
           <p>Outside research I am a traveler, photographer and video editor.</p>
           <p class="pron"><span class="mono label">Pronunciation</span> “Ze-hua Jiang” — <i>zuh</i>-<i>hwa</i> <i>jahng</i></p>
         </div>
 
         <div class="bio" data-lang-panel="zh" hidden>
           <h2>你好，我是蒋泽华。</h2>
-          <p>我是纽约大学 Tandon 工程学院计算机科学与工程专业的博士候选人，在<a href="https://game.engineering.nyu.edu/">纽约大学游戏创新实验室</a>跟随 <a href="http://julian.togelius.com/">Julian Togelius</a> 教授做研究。此前我在纽约大学获得电子工程硕士学位，并在<a href="https://www.sysu.edu.cn/sysuen/">中山大学</a>获得光电信息科学与工程学士学位，其间曾在加州大学伯克利分校交换。</p>
-          <p>我的研究方向是游戏中的程序化内容生成（PCG）：让智能体从设计目标出发构建可玩的关卡。我关注智能体的“构建知识”从何而来，包括通过强化学习从环境反馈中习得、借助大语言模型的预训练知识调用工具，以及封装在可复用工具里的知识，并研究生成流程如何让这些知识真正落地。</p>
+          <p>我是纽约大学计算机科学与工程专业的博士候选人，在<a href="https://game.engineering.nyu.edu/">纽约大学游戏创新实验室</a>跟随 <a href="http://julian.togelius.com/">Julian Togelius</a> 教授做研究。此前我在纽约大学获得电子工程硕士学位，并在<a href="https://www.sysu.edu.cn/sysuen/">中山大学</a>获得光电信息科学与工程学士学位，其间曾在加州大学伯克利分校交换。</p>
+          <p>我的研究方向是程序化内容生成（PCG）：智能体如何学习或复用构建策略，将设计目标转化为可玩的关卡。我研究强化学习、语言模型的工具使用和可复用的关卡构造，关注可控性、泛化、执行可靠性与计算成本，希望为游戏创作以及智能体的训练和评估提供更多样的环境。此前我也研究过合成指纹和虹膜。</p>
           <p>我也是一名旅行者、摄影师和视频剪辑师。欢迎随时与我联系！</p>
         </div>
 
@@ -462,6 +453,8 @@
   <img alt="">
 </dialog>
 
+<script src="assets/js/name-platformers.js"></script>
+<script src="assets/js/tile-name.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
