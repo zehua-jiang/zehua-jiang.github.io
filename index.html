@@ -36,15 +36,27 @@
 
 <main id="top">
 
-  <!-- ============ HERO ============ -->
-  <section class="hero wrap">
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="hero wrap">
     <div class="hero-text">
       <h1>Zehua Jiang</h1>
-      <p class="lede">
-        I study how agents <em>build playable game levels</em> from design goals. My work asks how they
-        learn from interaction with a game, reuse knowledge from pretraining, and choose tools that
-        help turn a request into a working level.
-      </p>
+      <div class="lang-switch" role="tablist" aria-label="Language">
+        <button class="chip active" data-lang="en" role="tab" aria-selected="true">English</button>
+        <button class="chip" data-lang="zh" role="tab" aria-selected="false">中文</button>
+      </div>
+
+      <div class="bio" data-lang-panel="en">
+        <p>I am a PhD candidate in Computer Science and Engineering at New York University, advised by Prof. <a href="http://julian.togelius.com/" target="_blank" rel="noopener noreferrer">Julian Togelius</a> at the <a href="https://game.engineering.nyu.edu/" target="_blank" rel="noopener noreferrer">NYU Game Innovation Lab</a>. Before that I earned an M.S. in Electrical Engineering at New York University and a B.S. in Optoelectronic Information Science and Engineering at <a href="https://www.sysu.edu.cn/sysuen/" target="_blank" rel="noopener noreferrer">Sun Yat-sen University</a>, including an exchange semester at UC Berkeley.</p>
+        <p>I study how agents <em>build playable game levels</em> from design goals by learning through game interaction, reusing pretrained knowledge, and choosing generation tools. My work spans reinforcement learning, open-ended generation from natural language, and reliable local language models, supporting both game creation and agent training. Earlier I worked on synthetic fingerprints and irises.</p>
+        <p>Outside research I am a traveler, photographer and video editor.</p>
+        <p class="pron"><span class="mono label">Pronunciation</span> “Ze-hua Jiang” — <i>zuh</i>-<i>hwa</i> <i>jahng</i> (You can also call me Z)</p>
+      </div>
+
+      <div class="bio" data-lang-panel="zh" hidden>
+        <p>我是纽约大学计算机科学与工程专业的博士候选人，在<a href="https://game.engineering.nyu.edu/" target="_blank" rel="noopener noreferrer">纽约大学游戏创新实验室</a>跟随 <a href="http://julian.togelius.com/" target="_blank" rel="noopener noreferrer">Julian Togelius</a> 教授做研究。此前我在纽约大学获得电子工程硕士学位，并在<a href="https://www.sysu.edu.cn/sysuen/" target="_blank" rel="noopener noreferrer">中山大学</a>获得光电信息科学与工程学士学位，其间曾在加州大学伯克利分校交换。</p>
+        <p>我研究智能体如何通过与游戏交互学习、复用预训练知识，以及选择生成工具，将设计目标转化为<em>可玩的游戏关卡</em>。我的工作涵盖强化学习、自然语言驱动的开放式生成，以及本地语言模型的可靠执行，希望支持游戏创作和智能体训练。此前我也研究过合成指纹和虹膜。</p>
+        <p>我平时喜欢旅游，拍照，拍视频。欢迎随时与我联系，交个朋友！</p>
+      </div>
       <p class="thesis">
         <span class="mono label">Thesis</span>
         Learning and Adapting Agents for Procedural Content Generation
@@ -54,101 +66,29 @@
         <button type="button" class="btn primary" data-copy-text="zehua.jiang@nyu.edu" aria-label="Copy email address" title="Copy email address">zehua.jiang@nyu.edu</button>
         <a class="btn" href="https://scholar.google.com/citations?user=N6yADnMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         <a class="btn" href="https://github.com/JiangZehua" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a class="btn" href="assets/pdf/CV_ZehuaJiang.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+        <a class="btn" href="assets/pdf/CV_ZehuaJiang.pdf?v=research-20261026" target="_blank" rel="noopener noreferrer">CV</a>
       </div>
     </div>
-
-    <figure class="name-animation">
-      <canvas id="nameCanvas" width="560" height="416" role="img" aria-label="Agents build Zehua Jiang from pixel brick tiles while original platformer characters run and jump along the name">Zehua Jiang</canvas>
-      <noscript>
-        <style>#nameCanvas { display: none; }</style>
-        <img src="assets/img/zehua-jiang-tiles.png" width="560" height="416" alt="Zehua Jiang, built from pixel brick tiles">
-      </noscript>
-    </figure>
-  </section>
-
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="section">
-    <div class="wrap about">
-      <img class="portrait" src="assets/img/zehua.jpg" alt="Portrait of Zehua Jiang" loading="lazy">
-      <div>
-        <p class="eyebrow">About</p>
-        <div class="lang-switch" role="tablist" aria-label="Language">
-          <button class="chip active" data-lang="en" role="tab" aria-selected="true">English</button>
-          <button class="chip" data-lang="zh" role="tab" aria-selected="false">中文</button>
-        </div>
-
-        <div class="bio" data-lang-panel="en">
-          <h2>Hi, I'm Zehua.</h2>
-          <p>I am a PhD candidate in Computer Science and Engineering at New York University, advised by Prof. <a href="http://julian.togelius.com/" target="_blank" rel="noopener noreferrer">Julian Togelius</a> at the <a href="https://game.engineering.nyu.edu/" target="_blank" rel="noopener noreferrer">NYU Game Innovation Lab</a>. Before that I earned an M.S. in Electrical Engineering at New York University and a B.S. in Optoelectronic Information Science and Engineering at <a href="https://www.sysu.edu.cn/sysuen/" target="_blank" rel="noopener noreferrer">Sun Yat-sen University</a>, including an exchange semester at UC Berkeley.</p>
-          <p>My research focuses on procedural content generation: how agents learn or reuse strategies for building playable levels from design goals. I study reinforcement learning, language-model tool use, and reusable constructions, with an emphasis on control, generalization, reliable execution, and computational cost. The aim is to support game creation and provide varied environments for training and evaluating agents. Earlier I worked on synthetic fingerprints and irises.</p>
-          <p>Outside research I am a traveler, photographer and video editor.</p>
-          <p class="pron"><span class="mono label">Pronunciation</span> “Ze-hua Jiang” — <i>zuh</i>-<i>hwa</i> <i>jahng</i></p>
-        </div>
-
-        <div class="bio" data-lang-panel="zh" hidden>
-          <h2>你好，我是蒋泽华。</h2>
-          <p>我是纽约大学计算机科学与工程专业的博士候选人，在<a href="https://game.engineering.nyu.edu/" target="_blank" rel="noopener noreferrer">纽约大学游戏创新实验室</a>跟随 <a href="http://julian.togelius.com/" target="_blank" rel="noopener noreferrer">Julian Togelius</a> 教授做研究。此前我在纽约大学获得电子工程硕士学位，并在<a href="https://www.sysu.edu.cn/sysuen/" target="_blank" rel="noopener noreferrer">中山大学</a>获得光电信息科学与工程学士学位，其间曾在加州大学伯克利分校交换。</p>
-          <p>我的研究方向是程序化内容生成（PCG）：智能体如何学习或复用构建策略，将设计目标转化为可玩的关卡。我研究强化学习、大语言模型的框架和可复用的关卡构造，关注可控性、泛化、执行可靠性与计算成本，希望为游戏创作以及智能体的训练和评估提供更多样的环境。此前我也研究过合成指纹和虹膜。</p>
-          <p>我平时喜欢旅游，拍照，拍视频。欢迎随时与我联系，交个朋友！</p>
-        </div>
-
-
-      </div>
+    <div class="hero-visuals">
+      <img class="portrait" src="assets/img/zehua.jpg" alt="Portrait of Zehua Jiang" width="300" height="375">
+      <figure class="name-animation">
+        <canvas id="nameCanvas" width="560" height="416" role="img" aria-label="Agents build Zehua Jiang from pixel brick tiles while original platformer characters run and jump along the name">Zehua Jiang</canvas>
+        <noscript>
+          <style>#nameCanvas { display: none; }</style>
+          <img src="assets/img/zehua-jiang-tiles.png" width="560" height="416" alt="Zehua Jiang, built from pixel brick tiles">
+        </noscript>
+      </figure>
     </div>
   </section>
 
-  <!-- ============ RESEARCH QUESTION ============ -->
-  <section id="research" class="section">
+  <!-- ============ RESEARCH ============ -->
+  <section id="research" class="section alt">
     <div class="wrap">
-      <p class="eyebrow">Research question</p>
-      <h2>How do agents learn and reuse strategies for building game levels?</h2>
-      <p class="section-lede">
-        A generator needs to know which edits produce a traversable path, a solvable puzzle, or a
-        requested gameplay experience. My dissertation studies this construction knowledge when
-        game rules and an executable environment are available but authored examples are limited.
-        I examine where the knowledge comes from and how observations, tools, and feedback let an
-        agent use it.
-      </p>
+      <p class="eyebrow">Research</p>
+      <h2>From learned editors to tool-using agents</h2>
+      <p class="section-lede">These projects explore reinforcement learning for controllable level generation and generalization across maps, open-ended generation from natural-language requests, and reliable execution with local language models.</p>
 
-      <div class="sources">
-        <article class="source">
-          <div class="source-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><rect x="4" y="22" width="8" height="14" rx="1"/><rect x="16" y="14" width="8" height="22" rx="1"/><rect x="28" y="5" width="8" height="31" rx="1"/></svg>
-          </div>
-          <h3>Learned from feedback</h3>
-          <p>Editing policies learn by building levels and receiving task rewards, without a corpus of authored examples. Their observations shape which strategies transfer to new targets, map sizes, and shapes.</p>
-        </article>
-        <article class="source">
-          <div class="source-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><path d="M6 10h28v18H18l-8 7v-7H6z"/></svg>
-          </div>
-          <h3>Carried from pretraining</h3>
-          <p>Pretrained language models select editing tools and generation algorithms, observe the results, and revise the level. This supports numeric targets and broader language requests without task-specific fine-tuning.</p>
-        </article>
-        <article class="source">
-          <div class="source-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40"><rect x="5" y="5" width="13" height="13" rx="1"/><rect x="22" y="5" width="13" height="13" rx="1"/><rect x="5" y="22" width="13" height="13" rx="1"/><rect x="22" y="22" width="13" height="13" rx="1" class="hollow"/></svg>
-          </div>
-          <h3>Encoded in tools</h3>
-          <p>Generation algorithms and tested level pieces supply useful constructions directly. My ongoing work asks whether search can discover reusable pieces and reduce the manual work needed to support a model.</p>
-        </article>
-      </div>
-
-      <blockquote class="finding">
-        <p>What an agent can build depends on both its construction knowledge and the process that lets it use that knowledge. Across my studies, observations, available tools, and environmental feedback shape control, generalization, and generation cost.</p>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- ============ RESEARCH ARC ============ -->
-  <section id="work" class="section alt">
-    <div class="wrap">
-      <p class="eyebrow">Research arc</p>
-      <h2>From learned policies to tool-using agents</h2>
-      <p class="section-lede">Five collaborative projects connect learned editing policies, tool-using language models, and reliable local execution. The ongoing work asks whether smaller adapted models and automatically discovered level pieces can make generation more practical while preserving control.</p>
-
-      <ol class="arc">
+      <ol class="arc" id="work">
 
         <!-- 1 -->
         <li class="arc-item">
@@ -160,6 +100,7 @@
             <p class="authors"><b>Zehua Jiang</b>, Sam Earle, Michael Cerny Green, Julian Togelius</p>
             <p>Extends PCGRL to Minecraft tasks with jumping and gravity. Editing policies learn structures such as staircases from task feedback and adapt them to different fixed-door configurations, without authored level examples. Control is stronger for shorter path targets and remains limited for jump counts and large vertical separations.</p>
             <div class="project-resources">
+              <a class="btn" href="https://x.com/jzh_000/status/1542861295426453506" target="_blank" rel="noopener noreferrer">X / Twitter</a>
               <details class="citation">
                 <summary class="btn">BibTeX</summary>
                 <div class="citation-content">
@@ -183,14 +124,11 @@ series = {FDG &#x27;22}
                 </div>
               </details>
             </div>
-            <div class="strip strip-5">
-              <img src="assets/img/mc-1.jpg" alt="Minecraft level, edit step 1" loading="lazy">
-              <img src="assets/img/mc-2.jpg" alt="Minecraft level, edit step 2" loading="lazy">
-              <img src="assets/img/mc-3.jpg" alt="Minecraft level, edit step 3" loading="lazy">
-              <img src="assets/img/mc-4.jpg" alt="Minecraft level, edit step 4" loading="lazy">
-              <img src="assets/img/mc-5.jpg" alt="Minecraft level, edit step 5" loading="lazy">
-            </div>
-            <p class="caption">Connecting two doors in a 7×7×7 space through successive edits. The agent builds a staircase; purple marks the path.</p>
+            <video class="project-video" data-demo-video muted loop playsinline controls preload="metadata" poster="assets/img/3d-pcg-poster.jpg" width="1920" height="1080" aria-label="Minecraft 3D level generation demonstrations">
+              <source src="assets/video/3d-pcg.mp4" type="video/mp4">
+              <a href="assets/video/3d-pcg.mp4">Watch the Minecraft generation demo</a>.
+            </video>
+            <p class="caption">Learned 3D level generation in Minecraft.</p>
           </div>
         </li>
 
@@ -202,8 +140,9 @@ series = {FDG &#x27;22}
           <div class="arc-body">
             <h3><a href="https://doi.org/10.1109/CoG60054.2024.10645598" target="_blank" rel="noopener noreferrer">Scaling, Control and Generalization in Reinforcement Learning Level Generators</a></h3>
             <p class="authors">Sam Earle, <b>Zehua Jiang</b>, Julian Togelius</p>
-            <p>A JAX implementation moves simulation and training onto the GPU. We study observation size, randomized map shapes, and fixed positions for key tiles. Local observations improve generalization on the tested unseen maps, while global observations can perform better on maps matching the training setup.</p>
+            <p>We introduce a JAX implementation that parallelizes simulation and learning on the GPU, removing CPU–GPU transfer overhead to substantially accelerate training and enable experiments with one billion timesteps. We also introduce randomized map shapes and fixed key-tile positions for greater control, and show how local observations improve generalization to unseen maps.</p>
             <div class="project-resources">
+              <a class="btn" href="https://x.com/jzh_000/status/1830321283306766540" target="_blank" rel="noopener noreferrer">X / Twitter</a>
               <details class="citation">
                 <summary class="btn">BibTeX</summary>
                 <div class="citation-content">
@@ -222,13 +161,23 @@ series = {FDG &#x27;22}
                 </div>
               </details>
             </div>
-            <div class="strip strip-4 pixel">
-              <figure><img src="assets/img/dungeon-size-1.png" alt="Dungeon level 8 by 8" loading="lazy"><figcaption class="mono">8×8</figcaption></figure>
-              <figure><img src="assets/img/dungeon-size-2.png" alt="Dungeon level 16 by 16" loading="lazy"><figcaption class="mono">16×16</figcaption></figure>
-              <figure><img src="assets/img/dungeon-size-3.png" alt="Dungeon level 24 by 24" loading="lazy"><figcaption class="mono">24×24</figcaption></figure>
-              <figure><img src="assets/img/dungeon-size-4.png" alt="Dungeon level 32 by 32" loading="lazy"><figcaption class="mono">32×32</figcaption></figure>
+            <div class="pcgrl-media">
+              <video class="project-video" data-demo-video muted loop playsinline controls preload="metadata" poster="assets/img/pcgrl-plus-poster.jpg" width="720" height="722" aria-label="PCGRL+ dungeon generation demonstration">
+                <source src="assets/video/pcgrl-plus.mp4" type="video/mp4">
+                <a href="assets/video/pcgrl-plus.mp4">Watch the PCGRL+ generation demo</a>.
+              </video>
+              <div class="pcgrl-demos">
+                <div class="gallery pcgrl-gallery" id="pcgrlGallery">
+                  <button data-full="assets/img/pcgrl-plus-1.gif?v=loop"><img src="assets/img/pcgrl-plus-1.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 1" loading="lazy"></button>
+                  <button data-full="assets/img/pcgrl-plus-2.gif?v=loop"><img src="assets/img/pcgrl-plus-2.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 2" loading="lazy"></button>
+                  <button data-full="assets/img/pcgrl-plus-3.gif?v=loop"><img src="assets/img/pcgrl-plus-3.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 3" loading="lazy"></button>
+                  <button data-full="assets/img/pcgrl-plus-4.gif?v=loop"><img src="assets/img/pcgrl-plus-4.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 4" loading="lazy"></button>
+                  <button data-full="assets/img/pcgrl-plus-5.gif?v=loop"><img src="assets/img/pcgrl-plus-5.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 5" loading="lazy"></button>
+                  <button data-full="assets/img/pcgrl-plus-6.gif?v=loop"><img src="assets/img/pcgrl-plus-6.gif?v=loop" alt="PCGRL+ editing a dungeon, map shape 6" loading="lazy"></button>
+                </div>
+              </div>
             </div>
-            <p class="caption">A policy trained on 16×16 maps with 3×3 local observations reuses its design pattern on smaller and larger maps.</p>
+            <p class="caption">PCGRL+ edits a dungeon step by step and generates levels across six map shapes. Select a small animation to enlarge it.</p>
           </div>
         </li>
 
@@ -240,7 +189,7 @@ series = {FDG &#x27;22}
           <div class="arc-body">
             <h3><a href="https://doi.org/10.1609/aiide.v21i1.36807" target="_blank" rel="noopener noreferrer">Video Game Level Design as a Multi-Agent Reinforcement Learning Problem</a></h3>
             <p class="authors">Sam Earle, <b>Zehua Jiang</b>, Eugene Vinitsky, Julian Togelius</p>
-            <p>Several agents with a shared policy and reward edit the same level. Their joint steps let multiple edits share an expensive reward computation. Some advantages shrink when total actions and reward computations are held constant, while benefits persist on tested maps with unfamiliar randomized shapes.</p>
+            <p>We formulate level generation as a cooperative multi-agent reinforcement learning problem, with agents jointly editing a shared level. Multiple edits share each reward computation, reducing evaluation overhead. Experiments show improved generation efficiency and generalization to unseen map shapes.</p>
             <div class="project-resources">
               <details class="citation">
                 <summary class="btn">BibTeX</summary>
@@ -262,13 +211,11 @@ series = {FDG &#x27;22}
                 </div>
               </details>
             </div>
-            <div class="strip strip-4">
-              <img src="assets/img/marl-1.png" alt="Multi-agent generation, start" loading="lazy">
-              <img src="assets/img/marl-2.png" alt="Multi-agent generation, early" loading="lazy">
-              <img src="assets/img/marl-3.png" alt="Multi-agent generation, later" loading="lazy">
-              <img src="assets/img/marl-4.png" alt="Multi-agent generation, final" loading="lazy">
+            <div class="gallery project-gallery multiagent-gallery" id="multiagentGallery">
+              <button data-full="assets/img/multiagent-generation.gif"><img src="assets/img/multiagent-generation.gif" width="288" height="288" alt="Multiple agents cooperatively editing a dungeon level" loading="lazy"></button>
+              <button data-full="assets/img/multiagent-20-agents.gif?v=loop"><img src="assets/img/multiagent-20-agents.gif?v=loop" width="288" height="288" alt="Twenty agents building a shared dungeon level" loading="lazy"></button>
             </div>
-            <p class="caption">Multiple agents cooperatively edit a shared Dungeon level over one episode.</p>
+            <p class="caption">Multiple agents cooperatively edit a shared Dungeon level, including a 20-agent generation episode.</p>
           </div>
         </li>
 
@@ -283,6 +230,7 @@ series = {FDG &#x27;22}
             <p>A language model builds and revises levels through tools, using symbolic observations and feedback after each action. Individual tile edits and higher-level generation algorithms share one interface, with evaluators deciding which revisions to keep. The framework supports computable targets and broader language requests across five game domains without task-specific fine-tuning.</p>
             <div class="project-resources">
               <a class="btn" href="https://zehua-jiang.github.io/AgenticPCG/" target="_blank" rel="noopener noreferrer">Project webpage</a>
+              <a class="btn" href="https://x.com/jzh_000/status/2039086919238185307" target="_blank" rel="noopener noreferrer">X / Twitter</a>
               <details class="citation">
                 <summary class="btn">BibTeX</summary>
                 <div class="citation-content">
@@ -297,26 +245,12 @@ series = {FDG &#x27;22}
                 </div>
               </details>
             </div>
-            <ul class="facts">
-              <li><b>5</b><span>game domains, no task-specific fine-tuning</span></li>
-              <li><b>4</b><span>levels of language requests: shapes, letters, spatial relations, scenes</span></li>
-              <li><b>~92%</b><span>of paired comparisons where people identified the level made for a given prompt (preliminary study, n = 17)</span></li>
-            </ul>
-            <div class="gallery pixel" id="apcgGallery">
-              <button data-full="assets/img/apcg-binary-1.png"><img src="assets/img/apcg-binary-1.png" alt="Binary maze with maximized path" loading="lazy"><span class="mono">Binary</span></button>
-              <button data-full="assets/img/apcg-binarydoor-1.png"><img src="assets/img/apcg-binarydoor-1.png" alt="Binary Door level" loading="lazy"><span class="mono">BinaryDoor</span></button>
-              <button data-full="assets/img/apcg-zelda-1.png"><img src="assets/img/apcg-zelda-1.png" alt="Zelda level with key and door" loading="lazy"><span class="mono">Zelda</span></button>
-              <button data-full="assets/img/apcg-sokoban-1.png"><img src="assets/img/apcg-sokoban-1.png" alt="Solvable Sokoban level" loading="lazy"><span class="mono">Sokoban</span></button>
-              <button data-full="assets/img/apcg-loderunner-1.png"><img src="assets/img/apcg-loderunner-1.png" alt="Lode Runner level" loading="lazy"><span class="mono">Lode Runner</span></button>
-              <button data-full="assets/img/apcg-loderunner-4.png"><img src="assets/img/apcg-loderunner-4.png" alt="Lode Runner level with many ropes" loading="lazy"><span class="mono">Lode Runner</span></button>
+            <div class="gallery project-gallery" id="apcgGallery">
+              <button data-full="assets/img/agentic-pcg-hero.gif"><img src="assets/img/agentic-pcg-hero.gif" width="2046" height="739" alt="Agentic PCG iteratively edits Binary Maze with Doors, Zelda, Lode Runner, and Sokoban levels" loading="lazy"></button>
+              <button data-full="assets/img/agentic-pcg-smb.gif"><img src="assets/img/agentic-pcg-smb.gif" width="1896" height="708" alt="Agentic PCG optimizes Super Mario Bros levels with gameplay simulation feedback" loading="lazy"></button>
             </div>
-            <div class="steps pixel">
-              <figure><img src="assets/img/bsp-1.png" alt="Editing step 1" loading="lazy"><figcaption class="mono">step 1</figcaption></figure>
-              <figure><img src="assets/img/bsp-2.png" alt="Editing step 2" loading="lazy"><figcaption class="mono">step 2</figcaption></figure>
-              <figure><img src="assets/img/bsp-3.png" alt="Editing step 4" loading="lazy"><figcaption class="mono">step 4</figcaption></figure>
-              <figure><img src="assets/img/bsp-4.png" alt="Editing step 18" loading="lazy"><figcaption class="mono">step 18</figcaption></figure>
-            </div>
-            <p class="caption">Gemini 2.5 Pro combines binary space partitioning generator calls with local edits to lengthen the path.</p>
+            <p class="caption">Tool-using agents generate and refine levels across game domains. Select an animation to enlarge it.</p>
+            <p class="caption">For details, see the <a href="https://zehua-jiang.github.io/AgenticPCG/" target="_blank" rel="noopener noreferrer">project webpage</a>.</p>
           </div>
         </li>
 
@@ -328,7 +262,7 @@ series = {FDG &#x27;22}
           <div class="arc-body">
             <h3><a href="https://ssrn.com/abstract=7502203" target="_blank" rel="noopener noreferrer">Enabling Agentic PCG with Harness-Controlled Local Models</a></h3>
             <p class="authors"><b>Zehua Jiang</b>, Sam Earle, Ahmed Khalifa, Julian Togelius</p>
-            <p>An execution harness helps local models recover from incomplete tool calls and preserve useful edits without changing their weights. Tested platformer builders also support requests about jumps, coins, and enemy defeats. The system remains limited by what its tools and evaluators can represent, and local generation is still too slow for use during gameplay.</p>
+            <p>An execution harness enables local language models to recover incomplete tool calls, use feedback, and retain successful level edits without changing their weights. Controlled experiments evaluate the harness and compare high-level PCG tools with tile-by-tile editing on structural design tasks, measuring target matching, structural success, and playability.</p>
             <div class="project-resources">
               <a class="btn" href="https://zehua-jiang.github.io/Local-Deployable-AgenticPCG/" target="_blank" rel="noopener noreferrer">Project webpage</a>
               <details class="citation">
@@ -348,16 +282,13 @@ series = {FDG &#x27;22}
                 </div>
               </details>
             </div>
-            <div class="bigstat">
-              <div><span class="num">6 <i>→</i> 64</span><span class="lbl">perfect matches out of 64 paired Zelda tasks for Qwen3.8-27B, from the bare model to the full harness</span></div>
+            <div class="gallery project-gallery" id="localAgenticGallery">
+              <button class="portrait-demo" data-full="assets/img/local-agentic-pcg-hero.gif"><img src="assets/img/local-agentic-pcg-hero.gif" width="874" height="1042" alt="The same local model with an open-loop baseline versus a full harness on exact Zelda path targets" loading="lazy"></button>
+              <button class="portrait-demo" data-full="assets/img/local-agentic-pcg-cave.gif"><img src="assets/img/local-agentic-pcg-cave.gif" width="994" height="1137" alt="A local model uses high-level PCG tools to smooth a Zelda cave and reconnect walkable regions, compared with tile edits alone" loading="lazy"></button>
+              <button class="portrait-demo" data-full="assets/img/local-agentic-pcg-rooms.gif"><img src="assets/img/local-agentic-pcg-rooms.gif" width="994" height="1107" alt="A local model uses high-level PCG tools to build Zelda rooms and corridors, compared with tile edits alone" loading="lazy"></button>
             </div>
-            <div class="harness-grid pixel">
-              <figure><img src="assets/img/harness-rooms.png" alt="Zelda rooms connected by corridors" loading="lazy"><figcaption>“…at least five distinct rectangular rooms connected by narrow corridors…”</figcaption></figure>
-              <figure><img src="assets/img/harness-cave.png" alt="Zelda cave level" loading="lazy"><figcaption>“…smooth the speckles into rounded cave masses, then join the walkable pockets…”</figcaption></figure>
-            </div>
-            <div class="smb pixel">
-              <figure><img src="assets/img/smb-gameplay.png" alt="Super Mario Bros level generated for a gameplay request" loading="lazy"><figcaption>“One jump should be enough; around it, arrange the playable path so all five coins are collected and three enemies are beaten.” <span class="mono ok">→ 5 coins · 3 enemies · 1 jump</span></figcaption></figure>
-            </div>
+            <p class="caption">Locally deployed models match Zelda path targets and use high-level PCG tools to build caves and rooms while preserving reachability. Select an animation to enlarge it.</p>
+            <p class="caption">For details, see the <a href="https://zehua-jiang.github.io/Local-Deployable-AgenticPCG/" target="_blank" rel="noopener noreferrer">project webpage</a>.</p>
           </div>
         </li>
 
@@ -371,15 +302,15 @@ series = {FDG &#x27;22}
             <div class="next-grid">
               <article>
                 <h4>Adapting small models</h4>
-                <p>Investigating models with fewer than four billion parameters. Initial supervised fine-tuning showed signs of overfitting; the plan now examines RL with verifiable rewards and on-policy distillation, while holding the tools and execution harness fixed.</p>
+                <p>Exploring whether language models with fewer than four billion parameters can reliably generate and revise levels, bringing natural-language PCG to edge devices with limited memory and compute.</p>
               </article>
               <article>
                 <h4>Reusable level pieces</h4>
-                <p>Investigating whether quality-diversity search, starting with MAP-Elites, can discover pieces that support jumps, enemy defeats, and item collection. A simulated player would test their behavior and how they fit together before an agent reuses them.</p>
+                <p>Discovering reusable level pieces with diverse functional properties, such as jump patterns, enemy encounters, and item collection. We aim to turn these pieces into generation tools and explore how construction strategies from larger models can be captured in reusable components.</p>
               </article>
               <article>
                 <h4>Player agents for richer feedback</h4>
-                <p>An exploratory direction: adapting a small model to choose valid gameplay actions quickly. More capable evaluation players could demonstrate a wider range of requested behaviors and give the level-building agent more useful feedback.</p>
+                <p>Developing compact player agents that evaluate levels through gameplay, providing richer feedback on requested behaviors and helping generators produce more varied, playable content.</p>
               </article>
             </div>
           </div>
@@ -403,7 +334,7 @@ series = {FDG &#x27;22}
         <li><time class="mono">2024</time><span>Scaling, control and generalization in RL level generators published at IEEE CoG 2024.</span></li>
         <li><time class="mono">2024.01</time><span>Passed my qualifying exam.</span></li>
         <li><time class="mono">2023.11</time><span>Co-organizer of the <a href="https://aingames.cn/ieee-wcci24-games/" target="_blank" rel="noopener noreferrer">Special Session on Games</a> at WCCI/CEC 2024.</span></li>
-        <li><time class="mono">2023.08</time><span>Gave the tutorial “Controllable Content Generators via Reinforcement Learning” with Sam Earle at <a href="https://2023.ieee-cog.org/program/" target="_blank" rel="noopener noreferrer">IEEE CoG 2023</a>.</span></li>
+        <li><time class="mono">2023.08</time><span>Gave the tutorial “Controllable Content Generators via Reinforcement Learning” with <a href="https://x.com/Smearle_RH" target="_blank" rel="noopener noreferrer">Sam Earle</a> at <a href="https://2023.ieee-cog.org/program/" target="_blank" rel="noopener noreferrer">IEEE CoG 2023</a>.</span></li>
         <li><time class="mono">2022.09</time><span>Presented “Learning Controllable 3D Level Generators” at the PCG Workshop, FDG 2022, Athens.</span></li>
       </ul>
     </div>
@@ -415,7 +346,7 @@ series = {FDG &#x27;22}
     <div class="wrap narrow">
       <h2>Education</h2>
       <dl class="edu">
-        <div><dt class="mono">2022 – 2026</dt><dd>Ph.D., Computer Science &amp; Engineering · New York University <span class="muted">(expected Dec 2026)</span></dd></div>
+        <div><dt class="mono">2022 – 2027</dt><dd>Ph.D., Computer Science &amp; Engineering · New York University <span class="muted">(expected Jan 2027)</span></dd></div>
         <div><dt class="mono">2021 – 2022</dt><dd>M.S., Electrical Engineering · New York University</dd></div>
         <div><dt class="mono">2016 – 2020</dt><dd>B.S., Optoelectronic Information Science &amp; Engineering · Sun Yat-sen University <span class="muted">(exchange at UC Berkeley, 2019)</span></dd></div>
       </dl>

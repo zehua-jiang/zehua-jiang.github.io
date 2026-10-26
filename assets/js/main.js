@@ -50,8 +50,8 @@
   /* ---------- lightbox ---------- */
   const box = document.getElementById('lightbox');
   const boxImg = box.querySelector('img');
-  document.querySelectorAll('#apcgGallery button').forEach(btn => btn.addEventListener('click', () => {
-    boxImg.src = btn.dataset.full;
+  document.querySelectorAll('.gallery button[data-full]').forEach(btn => btn.addEventListener('click', () => {
+    boxImg.src = btn.querySelector('img').src;
     boxImg.alt = btn.querySelector('img').alt;
     box.showModal();
   }));
@@ -59,7 +59,16 @@
 
   /* ---------- reveal + active nav ---------- */
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealEls = document.querySelectorAll('.source, .arc-item, .finding');
+  if (!reduced && 'IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver(entries => entries.forEach(({ target, isIntersecting }) => {
+      if (isIntersecting) {
+        target.play().catch(() => {});
+        videoObserver.unobserve(target);
+      }
+    }), { threshold: 0.25 });
+    document.querySelectorAll('[data-demo-video]').forEach(video => videoObserver.observe(video));
+  }
+  const revealEls = document.querySelectorAll('.arc-item');
   if ('IntersectionObserver' in window && !reduced) {
     revealEls.forEach(el => el.classList.add('reveal'));
     const io = new IntersectionObserver(entries => entries.forEach(e => {
