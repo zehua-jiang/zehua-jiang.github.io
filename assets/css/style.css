@@ -156,6 +156,19 @@ p { margin: 0 0 1em; }
 .next-grid h4 { font-size: 1.15rem; margin-bottom: 8px; }
 .next-grid p { font-size: .9rem; color: var(--ink-2); margin: 0; }
 
+/* ---------- other projects ---------- */
+.other-project { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; align-items: start; padding: 36px 0; border-top: 1px solid var(--line); }
+.other-project-media { margin: 0; min-width: 0; }
+.other-project-media .gallery { margin-top: 0; }
+.other-project-media .gallery button { width: 100%; background: #fff; }
+.other-project-media .gallery img { width: 100%; }
+#masteriris .other-project-media { width: 100%; max-width: 372px; }
+#masteriris .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.other-project-media .project-video { max-height: 360px; object-fit: contain; background: #111; }
+@media (max-width: 720px) {
+  .other-project { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+}
+
 /* language switch */
 .lang-switch { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 28px; }
 .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 6px 14px; font: 500 .85rem var(--sans); cursor: pointer; }

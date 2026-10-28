@@ -26,6 +26,7 @@
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#work">Work</a>
+      <a href="#other-projects">Other projects</a>
       <a href="#news">News</a>
     </nav>
     <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
@@ -316,6 +317,112 @@ series = {FDG &#x27;22}
           </div>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <!-- ============ OTHER PROJECTS ============ -->
+  <section id="other-projects" class="section" aria-labelledby="other-projects-title">
+    <div class="wrap">
+      <p class="eyebrow">Collaborations</p>
+      <h2 id="other-projects-title">Other projects I've been part of</h2>
+      <p class="section-lede">Collaborative projects beyond my thesis research, spanning puzzle-game benchmarks, language-guided reward design, biometric security, and controllable generation.</p>
+
+      <div class="other-projects">
+        <article class="other-project" id="puzzlejax">
+          <div class="arc-body">
+            <h3><a href="https://arxiv.org/abs/2508.16821" target="_blank" rel="noopener noreferrer">PuzzleJAX: A Benchmark for Reasoning and Learning</a></h3>
+            <p class="authors">Sam Earle, Graham Todd, Yuchen Li, Ahmed Khalifa, Muhammad Umair Nasir, <b>Zehua Jiang</b>, Andrzej Banburski-Fahey, Julian Togelius</p>
+            <p>A framework for testing search, reinforcement learning, and language-model agents on diverse PuzzleScript games. GPU-accelerated simulation makes human-designed puzzles accessible for large-scale experiments in reasoning and learning.</p>
+            <div class="project-resources">
+              <a class="btn" href="https://arxiv.org/abs/2508.16821" target="_blank" rel="noopener noreferrer">Paper</a>
+              <a class="btn" href="https://x.com/Smearle_RH/status/1960643637638844457" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+              <a class="btn" href="https://github.com/smearle/script-doctor" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          <figure class="other-project-media">
+            <video class="project-video" data-demo-video muted loop playsinline controls preload="metadata" poster="assets/img/puzzlejax-poster.jpg" width="1050" height="950" aria-label="PuzzleJAX gameplay examples from the official project repository">
+              <source src="assets/video/puzzlejax.mp4" type="video/mp4">
+              <a href="assets/video/puzzlejax.mp4">Watch the PuzzleJAX demo</a>.
+            </video>
+          </figure>
+        </article>
+
+        <article class="other-project" id="pcgrllm">
+          <div class="arc-body">
+            <h3><a href="https://arxiv.org/pdf/2502.10906" target="_blank" rel="noopener noreferrer">PCGRLLM</a></h3>
+            <p class="authors">In-Chang Baek, Sung-Hyun Kim, Sam Earle, <b>Zehua Jiang</b>, Jin-Ha Noh, Julian Togelius, Kyung-Joong Kim</p>
+            <p>Uses language models to turn story-like instructions into reward functions for reinforcement-learning level generators. Feedback from generated content helps refine the rewards and bring the resulting levels closer to the intended design.</p>
+            <div class="project-resources">
+              <a class="btn" href="https://arxiv.org/pdf/2502.10906" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+          <figure class="other-project-media">
+            <div class="gallery project-gallery">
+              <button type="button" data-full="assets/img/pcgrllm-fig1.png" aria-label="Enlarge the PCGRLLM framework diagram"><img src="assets/img/pcgrllm-fig1.png" width="1024" height="728" alt="PCGRLLM Figure 1: instructions, LLM reward design, alignment, agent training, and content feedback" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <article class="other-project" id="alpha-wolves">
+          <div class="arc-body">
+            <h3><a href="https://ieeexplore.ieee.org/abstract/document/10495605" target="_blank" rel="noopener noreferrer">Alpha-Wolves and Alpha-Mammals</a></h3>
+            <p class="authors">Sudipta Banerjee, Anubhav Jain, <b>Zehua Jiang</b>, Nasir Memon, Julian Togelius, Arun Ross</p>
+            <p>Explores dictionary attacks on iris recognition systems. Combining iris templates into alpha-wolves and alpha-mammals reveals how a small set of mixed templates can falsely match multiple identities, exposing a vulnerability in biometric matching.</p>
+            <div class="project-resources">
+              <a class="btn" href="https://ieeexplore.ieee.org/abstract/document/10495605" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+          <figure class="other-project-media">
+            <div class="gallery project-gallery">
+              <button type="button" data-full="assets/img/alpha-wolves.png" aria-label="Enlarge the alpha-wolf iris comparison"><img src="assets/img/alpha-wolves.png" width="692" height="538" alt="An alpha-wolf iris and two source wolf irises, with their corresponding IrisCodes and masks" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <article class="other-project" id="controllable-pod">
+          <div class="arc-body">
+            <h3><a href="https://arxiv.org/pdf/2305.18553" target="_blank" rel="noopener noreferrer">Controllable Path of Destruction</a></h3>
+            <p class="authors">Matthew Siper, Sam Earle, <b>Zehua Jiang</b>, Ahmed Khalifa, Julian Togelius</p>
+            <p>Learns to generate by repairing: destroying example artifacts produces training trajectories whose reverse actions teach a generator to rebuild them. Conditional inputs let designers steer the results, with experiments on 2D dungeons and 3D LEGO cars.</p>
+            <div class="project-resources">
+              <a class="btn" href="https://arxiv.org/pdf/2305.18553" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+          <figure class="other-project-media">
+            <video class="project-video" data-demo-video muted loop playsinline controls preload="metadata" poster="assets/img/controllable-pod-poster.jpg" width="640" height="368" aria-label="Controllable Path of Destruction LEGO car demonstration">
+              <source src="assets/video/controllable-pod.mp4" type="video/mp4">
+              <a href="assets/video/controllable-pod.mp4">Watch the LEGO car demo</a>.
+            </video>
+          </figure>
+        </article>
+        <article class="other-project" id="masterprint2">
+          <div class="arc-body">
+            <h3><a href="https://arxiv.org/pdf/2209.04909" target="_blank" rel="noopener noreferrer">MasterPrint2: Diversity and Novelty MasterPrints</a></h3>
+            <p class="authors">M Charity, Nasir Memon, <b>Zehua Jiang</b>, Abhi Sen, Julian Togelius</p>
+            <p>Extends DeepMasterPrints with quality-diversity search to generate sets of synthetic fingerprints. Diversity and novelty objectives seek prints that match different users, increasing the combined coverage of the set and revealing vulnerabilities in fingerprint recognition.</p>
+            <div class="project-resources">
+              <a class="btn" href="https://arxiv.org/pdf/2209.04909" target="_blank" rel="noopener noreferrer">Paper</a>
+            </div>
+          </div>
+          <figure class="other-project-media">
+            <div class="gallery project-gallery">
+              <button type="button" data-full="assets/img/masterprint2.png" aria-label="Enlarge the MasterPrint2 fingerprint examples"><img src="assets/img/masterprint2.png" width="1000" height="378" alt="Three rows of synthetic MasterPrint fingerprints with false-match-rate and coverage labels" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <article class="other-project" id="masteriris">
+          <div class="arc-body">
+            <h3>MasterIris</h3>
+          </div>
+          <figure class="other-project-media">
+            <div class="gallery project-gallery">
+              <button type="button" data-full="assets/img/masteriris.gif" aria-label="Enlarge the MasterIris StyleGAN2 animation"><img src="assets/img/masteriris.gif" width="1283" height="1276" alt="MasterIris StyleGAN2 animation showing changing synthetic iris images" loading="lazy"></button>
+              <button type="button" data-full="assets/img/masteriris-stylegan3.gif" aria-label="Enlarge the MasterIris StyleGAN3 animation"><img src="assets/img/masteriris-stylegan3.gif" width="1283" height="1276" alt="MasterIris StyleGAN3 animation showing changing synthetic iris images" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+      </div>
       <p class="muted small">Full list on <a href="https://scholar.google.com/citations?user=N6yADnMAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
     </div>
   </section>

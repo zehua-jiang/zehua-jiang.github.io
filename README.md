@@ -19,3 +19,12 @@ Project animation sources:
 - Multi-agent: the two supplied GIFs, saved as `multiagent-generation.gif` and `multiagent-20-agents.gif`.
 - Agentic PCG: hero animations from https://zehua-jiang.github.io/AgenticPCG/ (`assets/light/concat_1x4.gif` and `assets/light/smb_parallel.gif`).
 - Local Agentic PCG: hero animations from https://zehua-jiang.github.io/Local-Deployable-AgenticPCG/ (`assets/anim/harness_vs_openloop_pk40-kd32.gif`, `assets/anim/structural_tools_smooth-p1.gif`, and `assets/anim/structural_tools_rooms-p2.gif`).
+
+Other project media sources:
+- PuzzleJAX: official `gifs/header.gif` from https://github.com/smearle/script-doctor, converted to H.264 MP4 for playback; poster sampled at 45 seconds.
+- PCGRLLM: Figure 1, cropped from page 1 of https://arxiv.org/pdf/2502.10906 (v2).
+- Alpha-Wolves and Alpha-Mammals: supplied iris/IrisCode/mask screenshot.
+- Controllable Path of Destruction: supplied `922_1717596856.mp4` LEGO car demo; poster sampled at 2 seconds.
+- MasterPrint2: supplied fingerprint screenshot; paper at https://arxiv.org/pdf/2209.04909.
+- MasterIris: supplied `stylegan2_anim_2.gif`, preserved as `assets/img/masteriris.gif`.
+- MasterIris second animation: supplied `stylegan3-t_slow_drag.gif`, preserved as `assets/img/masteriris-stylegan3.gif`.
